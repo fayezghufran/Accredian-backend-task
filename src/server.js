@@ -1,8 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const referralRoutes = require('./routes/referral.routes');
 const app = express();
 
+
+app.use(cors());
 app.use(bodyParser.json());
 
 // Root URL response
