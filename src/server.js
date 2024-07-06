@@ -5,6 +5,11 @@ const app = express();
 
 app.use(bodyParser.json());
 
+// Root URL response
+app.get('/', (req, res) => {
+  res.send('Welcome to Accredian Backend API');
+});
+
 app.use('/api', referralRoutes);
 
 const PORT = process.env.PORT || 3000;
